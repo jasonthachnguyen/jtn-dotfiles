@@ -1,0 +1,95 @@
+format = """
+[ ](enten-red)\
+$os\
+$username\    
+[ 󰻴 ](bg:enten-red fg:enten-white)\
+$hostname\
+[ 淵天 ](bg:enten-red fg:enten-white)\
+[ ](fg:enten-red bg:enten-white)\
+$directory\
+[ ](fg:enten-white bg:enten-grey)\
+$git_branch\
+$git_status\
+[ ](fg:enten-grey bg:enten-black)\
+$python\
+[ ](fg:enten-black bg:enten-orange)\
+$time\
+[ ](fg:enten-orange bg:none)\
+$fill
+$character"""
+
+add_newline = true
+palette = 'enten'
+
+[fill]
+symbol = ' '
+
+[username]
+style_user = 'bg:enten-red fg:enten-white'
+show_always = true
+format = '[$user]($style)'
+
+[hostname]
+ssh_only = false
+disabled = false
+style = 'bg:enten-red fg:enten-white'
+format = '[$hostname]($style)'
+
+
+[directory]
+style = 'bg:enten-white fg:enten-black'
+disabled = false
+
+truncation_length = 3
+truncate_to_repo = false
+truncation_symbol = '.../'
+
+read_only = '󰌾'
+read_only_style = 'enten-red' #styles read only symbol
+
+format = '[$path]($style)[$read_only]($read_only_style)'
+
+[git_branch]
+symbol = ' '
+style = 'bg:enten-grey fg:enten-white'
+format = '[$symbol$branch(:$remote_name)]($style)'
+
+[git_status]
+style = 'bg:enten-grey fg:enten-white'
+format = '[ [$all_status$ahead_behind]($style)](bg:enten-grey)'
+
+[python]
+symbol = "  "
+style = "bg:enten-black"
+format = '[[ $symbol( $version) ](fg:enten-white bg:enten-black)]($style)'
+
+[character]
+success_symbol = '[󰗠 ](enten-green)'
+error_symbol = '[ ](error-red)'
+format = '  $symbol '
+
+[time]
+use_12hr = true
+disabled = false
+style='fg:enten-white bg:enten-orange'
+format = '[$time]($style)'
+
+[os]
+disabled = false
+style = "bg:enten-red fg:enten-white"
+
+[os.symbols]
+Arch = "󰣇 "
+
+
+[palettes.enten]
+enten-red = '#990000'
+error-red = '#FE6F5E'
+enten-white = '#E5E4E2'
+enten-black = '#1A1110'
+enten-orange = '#CD5700'
+enten-green = '#ACE1AF'
+enten-grey = '#696969'
+
+
+
