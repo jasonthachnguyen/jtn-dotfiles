@@ -1,0 +1,48 @@
+{
+    "group/hyprland": {
+        "orientation": "horizontal",
+        "modules": [
+            "hyprland/window",
+            "hyprland/workspaces",
+            "hyprland/submap",
+        ],
+    },
+
+    "hyprland/workspaces": {
+        "format": "{icon}",
+        "format-icons": {
+            "active": "",
+            "default": "",
+        },
+//        "format-window-separator": "",
+//        "window-rewrite-default": "󰣇",
+//        "window-rewrite": {
+//            "codium": "󰨞",
+//            "kitty": "",
+//            "steam": "",
+//            "title<.*nvim.*>": "",
+//            "title<.*Zen Browser.*>": "",
+//            "vesktop": "",
+//            "godot": "",
+//            "gimp": "",
+//            "title<.*rmpc.*>": "",
+//        },
+        "persistent-workspaces": {
+            "*": [1,2,3,4,5],
+        },
+        "all-outputs": true,
+    },
+
+    "hyprland/window": {
+        "format": "",
+        "fallback": "󰣇", 
+        "tooltip": true,
+        "tooltip-format": "{title}",
+        "icon": true,
+        "icon-size": 20,
+        },
+
+    "hyprland/submap": {
+        "format": "Current submap: {}",
+        },
+}

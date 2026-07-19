@@ -1,0 +1,71 @@
+{
+    
+    "group/music-modules":{
+        "orientation": "horizontal",
+        "modules": [
+            "pulseaudio",
+            "mpd",
+            "cava",
+        ],
+    },
+
+    "cava": {
+        "framerate": 60,
+        "autosens": 0,
+        "sensitivity": 1,
+        "bars": 16,
+        "lower_cutoff_freq": 50,
+        "higher_cutoff_freq": 10000,
+        "method": "fifo",
+        "source": "/tmp/mpd.fifo",
+        "hide_on_silence": true,
+        "sleep_timer": 1,
+        "stereo": true,
+        "bar_delimiter": 0,
+        "reverse": true,
+        "monstercat": false,
+        "waves": false,
+        "noise_reduction": 0.20,
+        "input_delay": 2,
+        "format-icons": [ " ", "▁", "▂", "▃", "▄", "▅", "▆", "▇", "█" ],
+        "actions": {
+            "on-click-right": "mode",
+        },
+    },
+
+    "mpd": {
+        "format": "{stateIcon} {artist} - {title} <small>{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}</small>",
+        "format-disconnected": "",
+        "format-stopped": "",
+        "tooltip-format": 
+            "Artist: {artist} - Album: {album} - Title: {title} - <small>({elapsedTime:%M:%S}/{totalTime:%M:%S})</small>", 
+        "interval": 2,
+        "title-len": 30,
+        "artist-len": 30,
+        "ellipsis": "...",
+        "consume-icons": { "on": " "},
+        "random-icons": { "on": " "},
+        "repeat-icons": { "on": " "},
+        "single-icons": { "on": "1 "},
+        "state-icons": { "paused": "", "playing": "", },
+        "on-click": "mpc toggle",
+        "on-click-right": "mpc stop",
+        "on-click-forward": "mpc next",
+        "on-click-backward": "mpc prev",
+        "on-scroll-up": "mpc volume +5",
+        "on-scroll-down": "mpc volume -5",
+    },
+
+    "pulseaudio": {
+        "format": "{icon} {volume}%",
+        "format-bluetooth": " {volume}%",
+        "format-muted": "{icon}",
+        "format-icons": {
+            "alsa_output.pci-0000_09_00.4.analog-stereo": "",
+            "alsa_output.pci-0000_07_00.1.hdmi-stereo": "",
+        },
+        "scroll-step": 1,
+        //My own personal script to switch listening devices
+        "on-click": "switchaudio",
+    },
+}

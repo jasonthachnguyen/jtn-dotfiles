@@ -1,0 +1,70 @@
+{
+    "group/sysinfo": {
+        "orientation": "horizontal",
+        "modules": [
+            "cpu",
+            "memory",
+            "keyboard-state",
+        ],
+    },
+
+    "cpu": {
+        "format": "{usage}%",
+        "interval": 10,
+    },
+    
+    "memory": {
+        "interval": 30,
+        "format": "{}%",
+    },
+
+    "bluetooth": {
+        "format-on": "",
+        "format-connected": " {device_alias}",
+        "format-connected-battery": " {device_alias} {device_battery_percentage}%",
+    },
+
+    "keyboard-state": {
+        "format": "{icon}",
+        "format-icons": {
+            "locked": "",
+            "unlocked": "",
+        },
+        "capslock": true,
+    },
+
+    "wlr/taskbar": {
+        "format": "{icon}",
+        "icon-size": 14,
+        "tooltip-format": "{title}",
+        "on-click": "minimize-raise",
+        "on-click-middle": "close",
+        "rewrite": {
+            "rmpc": "Rusty Music Player Client",
+            "kitty": "Kitty Terminal",
+        },
+
+    },
+
+    "clock":{
+        "format": " {:%b %d %Y - %I:%M %p}",
+        "tooltip-format": "<tt><small>{calendar}</small></tt>",
+        "calendar": {
+            "mode": "year",
+            "mode-mon-col": 3,
+            "weeks-pos": "left",
+            "on-scroll": 1,
+        },
+        "actions": {
+            "on-click": "mode",
+            "on-scroll-up": "shift_up",
+            "on-scroll-down": "shift_down",
+        },
+    },
+
+    "tray": {
+        "spacing": 10,
+        "icon-size": 21,
+    },
+}
+
