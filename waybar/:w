@@ -1,0 +1,46 @@
+@import "colors.css";
+
+*{
+    border: none;
+    margin: 0;
+    padding: 0;
+    min-height: 0;
+    font-family: 'JetBrainsMono Nerd Font', Roboto, Arial, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: @text;
+    background: transparent;
+}
+
+window#waybar{
+    background-color: @main-bg;
+    border-radius: 30px;
+    border: none;
+}
+
+#sub-modules-left,
+.modules-right,
+#workspaces
+{
+    background-color: @balanced-accent;
+    padding: 0px 20px 0px 15px;
+    margin: 5px;
+    border-radius: 30px;
+}
+
+#workspaces button{
+    padding: 0px 5px;
+}
+
+/* large margin needed to align the window so that it appears to be part of the 
+* center module group but doesnt affect its spacing or position */
+#window{
+    margin: 0px 10px 0px 750px;
+}
+
+
+#submap{
+    margin: 0px 10px 0px 10px;
+    font-size: 1.5rem;
+}
+

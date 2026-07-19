@@ -1,18 +1,9 @@
 {
-    "group/hyprland": {
-        "orientation": "horizontal",
-        "modules": [
-            "hyprland/window",
-            "hyprland/workspaces",
-            "hyprland/submap",
-        ],
-    },
-
     "hyprland/workspaces": {
         "format": "{icon}",
         "format-icons": {
-            "active": "",
-            "default": "",
+            "active": "",
+            "default": "",
         },
 //        "format-window-separator": "",
 //        "window-rewrite-default": "󰣇",
@@ -31,18 +22,24 @@
             "*": [1,2,3,4,5],
         },
         "all-outputs": true,
+        "expand": true,
     },
 
     "hyprland/window": {
-        "format": "",
+        "format": "{title}",
+        "max-length": 50,
         "fallback": "󰣇", 
         "tooltip": true,
         "tooltip-format": "{title}",
         "icon": true,
         "icon-size": 20,
+        "expand": true,
+        "rewrite": {
+            "(.*) - Zen Browser": "Zen Browser",
         },
+    },
 
     "hyprland/submap": {
-        "format": "Current submap: {}",
-        },
+        "format": "",
+    },
 }

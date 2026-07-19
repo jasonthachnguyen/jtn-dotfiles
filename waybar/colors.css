@@ -1,0 +1,7 @@
+@define-color text	#bfafac;
+@define-color base	black/*#141212*/;
+@define-color main-bg	alpha(@base, 0.5);
+@define-color balanced-accent #3c1717;
+@define-color light-accent #753f3f;
+@define-color dark-accent #331e1e;
+

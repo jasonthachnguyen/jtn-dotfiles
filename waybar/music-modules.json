@@ -1,14 +1,4 @@
 {
-    
-    "group/music-modules":{
-        "orientation": "horizontal",
-        "modules": [
-            "pulseaudio",
-            "mpd",
-            "cava",
-        ],
-    },
-
     "cava": {
         "framerate": 60,
         "autosens": 0,
@@ -18,7 +8,8 @@
         "higher_cutoff_freq": 10000,
         "method": "fifo",
         "source": "/tmp/mpd.fifo",
-        "hide_on_silence": true,
+        "hide_on_silence": false,
+        "format_silent": "        ", 
         "sleep_timer": 1,
         "stereo": true,
         "bar_delimiter": 0,
@@ -34,11 +25,11 @@
     },
 
     "mpd": {
-        "format": "{stateIcon} {artist} - {title} <small>{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}</small>",
-        "format-disconnected": "",
-        "format-stopped": "",
+        "format": " | {stateIcon} {artist} - {title} <small>{consumeIcon}{randomIcon}{repeatIcon}{singleIcon}</small>| ",
+        "format-disconnected": "                  ",
+        "format-stopped": "                  ",
         "tooltip-format": 
-            "Artist: {artist} - Album: {album} - Title: {title} - <small>({elapsedTime:%M:%S}/{totalTime:%M:%S})</small>", 
+            "Artist: {artist}\nAlbum: {album}\nTitle: {title}\nLength: ({elapsedTime:%M:%S}/{totalTime:%M:%S})", 
         "interval": 2,
         "title-len": 30,
         "artist-len": 30,
