@@ -74,16 +74,11 @@ button:hover {
     padding: 0px 5px;
     margin: 0px 5px;
     min-width: 20px;
-    background: transparent;
-    background-color: @balanced-accent;
+    box-shadow: inset 0px 0px 15px @balanced-accent;
 }
 
 #workspaces button.active{
     min-width: 50px;
-}
-
-#workspace button.empty{
-    background-color: transparent;
 }
 
 #window{

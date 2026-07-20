@@ -52,7 +52,7 @@
         "format-bluetooth": " {volume}%",
         "format-muted": "{icon}",
         "format-icons": {
-            "alsa_output.pci-0000_09_00.4.analog-stereo": "",
+            "alsa_output.pci-0000_09_00.4.analog-stereo": " ",
             "alsa_output.pci-0000_07_00.1.hdmi-stereo": "",
         },
         "scroll-step": 1,
